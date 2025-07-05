@@ -213,7 +213,7 @@ def setup_calc(
     return calc
 
 
-def setup_docking_calc(
+def setup_dock_calc(
     working_dir: Union[str, Path],
     host_smiles: str,
     guest_smiles: str,
@@ -244,7 +244,7 @@ def setup_docking_calc(
     # Normalize and prepare paths
     if isinstance(working_dir, str):
         working_dir = Path(working_dir)
-    docking_dir = working_dir.resolve() / "docking"
+    docking_dir = working_dir.resolve() / "dock"
     docking_dir.mkdir(parents=True, exist_ok=True)
 
     # Generate and save guest structure
